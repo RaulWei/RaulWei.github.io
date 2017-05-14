@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>RaulWei&#39;s</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-05-14T15:11:48.698Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>RaulWei</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo together with Github.io</title>
+    <link href="http://yoursite.com/2017/05/14/Hexo-together-with-Github-io/"/>
+    <id>http://yoursite.com/2017/05/14/Hexo-together-with-Github-io/</id>
+    <published>2017-05-14T10:26:04.000Z</published>
+    <updated>2017-05-14T15:11:48.698Z</updated>
+    
+    <content type="html"><![CDATA[<p>Most programmers have their own blog. I come across an article in Zhihu today, guiding user to setup blog with the help of Hexo and Github.io. I follow that article, so this blog was born.</p>
+<p>I summarize steps briefly as below.</p>
+<ol>
+<li>create repo (username.github.io)</li>
+<li>install git<ul>
+<li>config global username and email</li>
+<li>config ssh</li>
+</ul>
+</li>
+<li>install node.js (npm attached)<ul>
+<li>install on Win is easy</li>
+<li>use <code>node -v</code> to check if node.js install success</li>
+<li>use <code>npm -v</code> to check if npm install success</li>
+</ul>
+</li>
+<li>create blog folder</li>
+<li>install Hexo<ul>
+<li><code>npm install -g hexo-cli</code></li>
+</ul>
+</li>
+<li>Hexo commands<ul>
+<li>init blog <code>hexo init</code></li>
+<li>new article <code>hexo new article_name</code></li>
+<li>generate blog <code>hexo g</code> == <code>hexo generate</code></li>
+<li>preview blog at the local <code>hexo s</code> == <code>hexo server</code></li>
+<li>change IP <code>hexo server -i ip_addr</code></li>
+<li>change port <code>hexo server -p new_port</code></li>
+<li>deploy blog <code>hexo d</code> == <code>hexo deploy</code></li>
+<li>clean cache <code>hexo clean</code></li>
+</ul>
+</li>
+<li>Hexo deploy steps<ol>
+<li>modify <code>_config.yml</code> in root path</li>
+<li>install plug-in <code>npm install hexo-deployer-git --save</code></li>
+<li>hexo clean, generate and deploy in order</li>
+</ol>
+</li>
+<li>choose your favorite Hexo theme</li>
+<li>learn some Markdown grammar to write blogs</li>
+</ol>
+<p>When I deploy Hexo, there are some problems. If you use <code>cmd</code> to deploy, you have to set environment variable of <code>git</code>, or you can use <code>git bash</code> instead of <code>cmd</code>. If you meet error that <code>bash: /dev/tty: No such device or address</code>, maybe you can change <code>repo</code> value from <code>https</code> address to <code>ssh</code> address in <code>root\_config.yml</code>.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Most programmers have their own blog. I come across an article in Zhihu today, guiding user to setup blog with the help of Hexo and Githu
+    
+    </summary>
+    
+      <category term="Technique" scheme="http://yoursite.com/categories/Technique/"/>
+    
+    
+  </entry>
+  
+</feed>
