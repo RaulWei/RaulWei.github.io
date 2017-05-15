@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/05/15/Some-minor-customizations-based-on-NexT/</loc>
+    
+    <lastmod>2017-05-15T14:50:43.422Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/05/14/Hexo-together-with-Github-io/</loc>
     
-    <lastmod>2017-05-14T15:11:48.698Z</lastmod>
+    <lastmod>2017-05-15T13:58:24.171Z</lastmod>
     
   </url>
   
