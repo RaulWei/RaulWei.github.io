@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-15T14:50:43.422Z</updated>
+  <updated>2017-05-15T14:58:43.851Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/05/15/Some-minor-customizations-based-on-NexT/"/>
     <id>http://yoursite.com/2017/05/15/Some-minor-customizations-based-on-NexT/</id>
     <published>2017-05-15T13:55:03.000Z</published>
-    <updated>2017-05-15T14:50:43.422Z</updated>
+    <updated>2017-05-15T14:58:43.851Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Modify-the-square-avatar-to-circle"><a href="#Modify-the-square-avatar-to-circle" class="headerlink" title="Modify the square avatar to circle"></a>Modify the square avatar to circle</h2><ol>
 <li>Open <code>\Blog\themes\next\source\css\_common\components\sidebar\sidebar-author.styl</code></li>
@@ -57,7 +57,7 @@
     <link href="http://yoursite.com/2017/05/14/Hexo-together-with-Github-io/"/>
     <id>http://yoursite.com/2017/05/14/Hexo-together-with-Github-io/</id>
     <published>2017-05-14T10:26:04.000Z</published>
-    <updated>2017-05-15T13:58:24.171Z</updated>
+    <updated>2017-05-15T14:58:46.267Z</updated>
     
     <content type="html"><![CDATA[<p>Most programmers have their own blog. I come across an article in Zhihu today, guiding user to setup blog with the help of Hexo and Github.io. I follow that article, so this blog was born.</p>
 <p>I summarize steps briefly as below.</p>
