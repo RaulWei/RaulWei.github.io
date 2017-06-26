@@ -83,7 +83,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Shanghai," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -101,17 +101,17 @@
 
 
 
-<meta name="description" content="申请落户这个过程需要与高校行政部门打交道，是比较恶心的一个环节，看起来5分钟能搞定的事，很有可能因各种原因被耽误两三天。而对于非沪高校而言，整个过程不仅恶心，而且可控性低，快递来回费时费力，所以尽快着手签字盖章等事项，免得夜长梦多。 申请材料包括 《2017年非上海生源应届普通高校毕业生进沪就业办理户籍申请表》（公司HR准备）； 《2017年非上海生源应届普通高校毕业生个人信息表》（双面打印，学校">
-<meta name="keywords" content="Shanghai">
+<meta name="description" content="这两天项目轻松点，抽空在刷阮一峰大佬的《ES6标准入门》，其中尾调用优化一节相当牛逼，且具有一定挑战性和启发性，故此开一篇博客，抄袭、总结、思考一番。这篇博文的整体行文架构将十分厚颜无耻地直接抄袭自阮大佬，章节标题之下会有一些自己的总结，针对一些难以理解的概念、代码，将一定程序展开讨论，争取形成一篇未必有干货但铁定有私货的文章。 尾调用要谈尾递归，先说尾调用，英文名字是Tail Call。什么是尾">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2017年非上海生源应届毕业生申请上海户口指北">
-<meta property="og:url" content="http://yoursite.com/2017/05/30/2017年非上海生源应届毕业生申请上海户口指北/index.html">
+<meta property="og:title" content="尾递归怎么优化">
+<meta property="og:url" content="http://yoursite.com/2017/06/26/尾递归怎么优化/index.html">
 <meta property="og:site_name" content="RaulWei&#39;s">
-<meta property="og:description" content="申请落户这个过程需要与高校行政部门打交道，是比较恶心的一个环节，看起来5分钟能搞定的事，很有可能因各种原因被耽误两三天。而对于非沪高校而言，整个过程不仅恶心，而且可控性低，快递来回费时费力，所以尽快着手签字盖章等事项，免得夜长梦多。 申请材料包括 《2017年非上海生源应届普通高校毕业生进沪就业办理户籍申请表》（公司HR准备）； 《2017年非上海生源应届普通高校毕业生个人信息表》（双面打印，学校">
-<meta property="og:updated_time" content="2017-05-30T15:29:39.800Z">
+<meta property="og:description" content="这两天项目轻松点，抽空在刷阮一峰大佬的《ES6标准入门》，其中尾调用优化一节相当牛逼，且具有一定挑战性和启发性，故此开一篇博客，抄袭、总结、思考一番。这篇博文的整体行文架构将十分厚颜无耻地直接抄袭自阮大佬，章节标题之下会有一些自己的总结，针对一些难以理解的概念、代码，将一定程序展开讨论，争取形成一篇未必有干货但铁定有私货的文章。 尾调用要谈尾递归，先说尾调用，英文名字是Tail Call。什么是尾">
+<meta property="og:updated_time" content="2017-06-26T15:54:21.991Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2017年非上海生源应届毕业生申请上海户口指北">
-<meta name="twitter:description" content="申请落户这个过程需要与高校行政部门打交道，是比较恶心的一个环节，看起来5分钟能搞定的事，很有可能因各种原因被耽误两三天。而对于非沪高校而言，整个过程不仅恶心，而且可控性低，快递来回费时费力，所以尽快着手签字盖章等事项，免得夜长梦多。 申请材料包括 《2017年非上海生源应届普通高校毕业生进沪就业办理户籍申请表》（公司HR准备）； 《2017年非上海生源应届普通高校毕业生个人信息表》（双面打印，学校">
+<meta name="twitter:title" content="尾递归怎么优化">
+<meta name="twitter:description" content="这两天项目轻松点，抽空在刷阮一峰大佬的《ES6标准入门》，其中尾调用优化一节相当牛逼，且具有一定挑战性和启发性，故此开一篇博客，抄袭、总结、思考一番。这篇博文的整体行文架构将十分厚颜无耻地直接抄袭自阮大佬，章节标题之下会有一些自己的总结，针对一些难以理解的概念、代码，将一定程序展开讨论，争取形成一篇未必有干货但铁定有私货的文章。 尾调用要谈尾递归，先说尾调用，英文名字是Tail Call。什么是尾">
 
 
 
@@ -139,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/30/2017年非上海生源应届毕业生申请上海户口指北/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/26/尾递归怎么优化/"/>
 
 
 
 
 
-  <title>2017年非上海生源应届毕业生申请上海户口指北 | RaulWei's</title>
+  <title>尾递归怎么优化 | RaulWei's</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -285,7 +285,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/30/2017年非上海生源应届毕业生申请上海户口指北/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/26/尾递归怎么优化/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="RaulWei">
@@ -302,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">2017年非上海生源应届毕业生申请上海户口指北</h1>
+          <h1 class="post-title" itemprop="name headline">尾递归怎么优化</h1>
         
 
         <div class="post-meta">
@@ -314,8 +314,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-30T22:34:07+08:00">
-                2017-05-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-26T23:28:41+08:00">
+                2017-06-26
               </time>
             
 
@@ -337,8 +337,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Life/" itemprop="url" rel="index">
-                    <span itemprop="name">Life</span>
+                  <a href="/categories/Technique/" itemprop="url" rel="index">
+                    <span itemprop="name">Technique</span>
                   </a>
                 </span>
 
@@ -376,82 +376,15 @@
       
 
       
-        <h2 id="申请落户"><a href="#申请落户" class="headerlink" title="申请落户"></a>申请落户</h2><p>这个过程需要与高校行政部门打交道，是比较恶心的一个环节，看起来5分钟能搞定的事，很有可能因各种原因被耽误两三天。而对于非沪高校而言，整个过程不仅恶心，而且可控性低，快递来回费时费力，所以尽快着手签字盖章等事项，免得夜长梦多。</p>
-<h3 id="申请材料包括"><a href="#申请材料包括" class="headerlink" title="申请材料包括"></a>申请材料包括</h3><ol>
-<li>《2017年非上海生源应届普通高校毕业生进沪就业办理户籍申请表》（公司HR准备）；</li>
-<li>《2017年非上海生源应届普通高校毕业生个人信息表》（双面打印，学校盖章）；</li>
-<li>普通高等学校毕业生推荐表（学校发放）；</li>
-<li>普通高等学校毕业生就业协议书（学校发放，三方个人联）；</li>
-<li>成绩单（原件，学校盖章）；</li>
-<li>外语等级证书（复印件，学校盖章，验原件）；</li>
-<li>计算机等级证书（复印件，学校盖章，验原件，研究生不需要这项）；</li>
-<li>用人单位企业营业执照（公司HR准备）；</li>
-<li>最高学历学习阶段所获奖项证书（复印件，学校盖章，验原件）；</li>
-<li>最高学历学习期间获得发明专利证书及相关材料；</li>
-<li>最高学历学习期间创业的相关证明材料；</li>
-<li>其他相关材料；</li>
-</ol>
-<h3 id="材料及学校各部门对应操作"><a href="#材料及学校各部门对应操作" class="headerlink" title="材料及学校各部门对应操作"></a>材料及学校各部门对应操作</h3><table>
-<thead>
-<tr>
-<th></th>
-<th>个人信息表</th>
-<th>推荐表</th>
-<th>三方</th>
-<th>成绩单</th>
-<th>外语等级证复印件</th>
-<th>证书复印件</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>学院教学干事</td>
-<td>签字+盖章</td>
-<td></td>
-<td></td>
-<td>盖章 o</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>学院领导</td>
-<td>签字</td>
-<td>签字</td>
-<td>签字</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>学院章</td>
-<td>盖章</td>
-<td>盖章</td>
-<td>盖章</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>研究生培养处</td>
-<td>盖章</td>
-<td></td>
-<td></td>
-<td>盖章</td>
-<td>盖章 o</td>
-<td>盖章 o</td>
-</tr>
-<tr>
-<td>学校就业办公室</td>
-<td>盖章</td>
-<td>盖章</td>
-<td>盖章</td>
-<td></td>
-<td>盖章</td>
-<td>盖章</td>
-</tr>
-</tbody>
-</table>
-<p>o标记为非必须，本人为保险起见而多盖了这几个章。</p>
+        <p>这两天项目轻松点，抽空在刷阮一峰大佬的《ES6标准入门》，其中<code>尾调用优化</code>一节相当牛逼，且具有一定挑战性和启发性，故此开一篇博客，抄袭、总结、思考一番。这篇博文的整体行文架构将十分厚颜无耻地直接抄袭自阮大佬，章节标题之下会有一些自己的总结，针对一些难以理解的概念、代码，将一定程序展开讨论，争取形成一篇未必有干货但铁定有私货的文章。</p>
+<h2 id="尾调用"><a href="#尾调用" class="headerlink" title="尾调用"></a>尾调用</h2><p>要谈尾递归，先说尾调用，英文名字是Tail Call。什么是尾调用？大佬说了，就是指某个函数的最后一步是调用另一个函数！这里的最后一步是指实际执行过程中的最后一步，不一定是从代码上看到的函数末尾。<br>看几个例子。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 情况一</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x</span>)</span>&#123;</div><div class="line">  <span class="keyword">let</span> y = g(x);</div><div class="line">  <span class="keyword">return</span> y;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 函数调用之后还有赋值操作，它不是最后一步，因此它不属于尾调用</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 情况二</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> g(x) + <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 函数调用之后还有求和操作，它不是最后一步，因此它不属于尾调用</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 情况三</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x</span>)</span>&#123;</div><div class="line">  g(x);</div><div class="line">&#125;</div><div class="line"><span class="comment">// 看起来贼像，但是实际上它等价于下面的代码</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x</span>)</span>&#123;</div><div class="line">  g(x);</div><div class="line">  <span class="keyword">return</span> <span class="literal">undefined</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 函数调用之后还有return操作，它不是最后一步，因此它不属于尾调用</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// tail recursion without optimization</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (y &gt; <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">return</span> sum(x + <span class="number">1</span>, y - <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> x;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>, <span class="number">1000000</span>));</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// tail recursion optimization 1: tramponline</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">tramponline</span>(<span class="params">f</span>) </span>&#123;</div><div class="line">    <span class="keyword">while</span> (f &amp;&amp; f <span class="keyword">instanceof</span> <span class="built_in">Function</span>) &#123;</div><div class="line">        f = f();</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> f;</div><div class="line">&#125;;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (y &gt; <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">return</span> sum.bind(<span class="literal">null</span>, x + <span class="number">1</span>, y - <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> x;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(tramponline(sum(<span class="number">1</span>, <span class="number">100000</span>)));</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// tail recursion optimization 2: tco</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">tco</span>(<span class="params">f</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> value;</div><div class="line">    <span class="keyword">var</span> active = <span class="literal">false</span>;</div><div class="line">    <span class="keyword">var</span> accumulated = [];</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">accumulator</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        accumulated.push(<span class="built_in">arguments</span>);</div><div class="line">        <span class="keyword">if</span> (!active) &#123;</div><div class="line">            active = <span class="literal">true</span>;</div><div class="line">            <span class="keyword">while</span> (accumulated.length) &#123;</div><div class="line">                value = f.apply(<span class="keyword">this</span>, accumulated.shift());</div><div class="line">            &#125;</div><div class="line">            active = <span class="literal">false</span>;</div><div class="line">            <span class="keyword">return</span> value;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> sum = tco(<span class="function"><span class="keyword">function</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (y &gt; <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">return</span> sum(x + <span class="number">1</span>, y - <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> x;</div><div class="line">&#125;);</div><div class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>, <span class="number">100000</span>));</div></pre></td></tr></table></figure>
+<p>未完待续</p>
 
       
     </div>
@@ -481,7 +414,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Shanghai/" rel="tag"># Shanghai</a>
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
         </div>
       
@@ -494,8 +427,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/15/Some-minor-customizations-based-on-NexT/" rel="next" title="Some minor customizations based on NexT">
-                <i class="fa fa-chevron-left"></i> Some minor customizations based on NexT
+              <a href="/2017/06/21/STM对我来讲是一种什么样的体验/" rel="next" title="STM对我来讲是一种什么样的体验">
+                <i class="fa fa-chevron-left"></i> STM对我来讲是一种什么样的体验
               </a>
             
           </div>
@@ -503,10 +436,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/21/STM对我来讲是一种什么样的体验/" rel="prev" title="STM对我来讲是一种什么样的体验">
-                STM对我来讲是一种什么样的体验 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -653,7 +582,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#申请落户"><span class="nav-number">1.</span> <span class="nav-text">申请落户</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#申请材料包括"><span class="nav-number">1.1.</span> <span class="nav-text">申请材料包括</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#材料及学校各部门对应操作"><span class="nav-number">1.2.</span> <span class="nav-text">材料及学校各部门对应操作</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#尾调用"><span class="nav-number">1.</span> <span class="nav-text">尾调用</span></a></li></ol></div>
             
 
           </div>
