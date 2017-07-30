@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-02T10:00:32.563Z</updated>
+  <updated>2017-07-30T16:37:13.221Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Bootcamp也结束了</title>
+    <link href="http://yoursite.com/2017/07/17/Bootcamp%E4%B9%9F%E7%BB%93%E6%9D%9F%E4%BA%86/"/>
+    <id>http://yoursite.com/2017/07/17/Bootcamp也结束了/</id>
+    <published>2017-07-16T16:28:05.000Z</published>
+    <updated>2017-07-30T16:37:13.221Z</updated>
+    
+    <content type="html"><![CDATA[<p>正式进组干活之前，大概有一个月的时间，给我们学习一些必要技术，这个过程就是Bootcamp。Bootcamp期间，根据wiki完成practice，有信心了就可以申请exam，通过了就ok了。上海office成员会直接跳过basic阶段，去完成intermediate，如果这其中有什么基础知识方面的困惑，可以回过头去查basic wiki。Intermediate包括三个部分，前端的<code>Google Closure</code>和后端的<code>Java Web</code>以及<code>Elastic Search</code>。</p>
+<h2 id="Client-Side"><a href="#Client-Side" class="headerlink" title="Client Side"></a>Client Side</h2><p>Client Side做了一个半礼拜，主要是基于Google Closure实现一个纯前端的Web Editor，后端是mock的。其实就其功能而言，用jQuery甚至是纯JavaScript实现起来都算不上难，难就难在必须使用Closure。Google Closure算是一款略小众的前端框架了，大家基本上对Closure都没有使用经验，学起来都比较陡峭，再加上有限的时间，这就使得我们必须快速掌握Closure的基本用法，还要一点很重要，就是要找到一个靠谱的解决疑问和bug的方式。<br>网络上关于Google Closure的资料并不多，主要啃它的官方文档以及API库，官方文档写的是真不错，很容易就上手了，但是想要完成更复杂的任务，仍然不太容易。学习完官方文档对Closure有一个初步认知后，再跟着Practice完成一个Demo。Practice真是又臭又长，但幸运的是静下心来学习完收获很大，其实最重要的是掌握其自定义事件声明、参数传递、触发以及异步处理，熟悉了以上这些，再加上exam的整体结构框架都写好了，基本上通过exam没有大问题了。</p>
+<h2 id="Server-Side"><a href="#Server-Side" class="headerlink" title="Server Side"></a>Server Side</h2><p>个人认为这是Bootcamp最难的一块，幸亏有大佬的源码和步骤解析，不然我不知道要猴年马月才能通过呢。其实能感觉到，这块对于有一定Java Web开发经验的人来讲也算不上难，但是对于我这样的Java新手而言，突如其来的各种Java生态圈的框架、库、特性，我完全一脑子浆糊，不知从何入手。教程上略过的常识性知识，往往会成为我失败的关键点。幸运的是，有一点比研究生阶段好，那就是大家都干同一件事，有问题可以找人问，找大佬带，不再是自己一个人干到底，大家讨论互助，这事儿差不多就成了。<br>通过向大佬请教，向Google提问，在短短一周之内，我一个彻彻底底的Java小白，学习并熟悉了Java 8的Lambda和Stream的使用，Spring的基本结构与配置，注解的装配，请求的处理过程，Tomcat及Maven的基础使用，JDBCTemplate连接数据库相关方法，Cassandra基础及API方法等等。在参考了大佬源码的基础之上，磕磕绊绊把工程缺漏的代码补上并运行成功。心里稍微遗憾的是没能完全自主独立通过exam，如果能跳出舒适区，顶着压力提起勇气迎难而上，完完全全靠自己pass，想必会有另一番收获体会和成就感。</p>
+<h2 id="Elastic-Search"><a href="#Elastic-Search" class="headerlink" title="Elastic Search"></a>Elastic Search</h2><p>相对来讲，Elastic Search比前两个exam要稍微简单一些，一方面是知识点比较集中，另一方面是exam的代码量少。Practice中关于Elastic Search的介绍讲的比较清晰了，后来发现似乎是从官方文档中摘取的。果然，官方文档才是最清晰最容易上手的，因此一定要学好英语，读懂官文比野鸡博客高明许多。Bootcamp中关于Elastic Search的重点主要包括两方面，一个是query，再一个是aggregation，从这两个维度深挖基本上就掌握了Elastic Search核心的70%。不过仅仅通过Bootcamp是远远不够的，无论是深度和广度都差得远，在之后的工作中还是得反复咀嚼，力求对几个常用框架有自己的理解。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上，就是将近一个月Bootcamp的学习内容，实际上这个月有点松懈了，除了做Bootcamp以外并没有执行自己的学习计划，原本打算7月份完成的自学任务没有完成，8月开始正式进组干活后属于自己的时间就更少了。人还是应该居安思危，给自己制造一些紧迫感，逼自己努力前进，不然就真的温水煮青蛙了，浪费一天，浪费两天，渐渐地，一年两年，我就毁了。还是赶快move on，免得未来后悔。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;正式进组干活之前，大概有一个月的时间，给我们学习一些必要技术，这个过程就是Bootcamp。Bootcamp期间，根据wiki完成practice，有信心了就可以申请exam，通过了就ok了。上海office成员会直接跳过basic阶段，去完成intermediate，如果
+    
+    </summary>
+    
+      <category term="Work" scheme="http://yoursite.com/categories/Work/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+      <category term="WAP" scheme="http://yoursite.com/tags/WAP/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JavaScript的尾递归怎么优化</title>
     <link href="http://yoursite.com/2017/06/26/JavaScript%E7%9A%84%E5%B0%BE%E9%80%92%E5%BD%92%E6%80%8E%E4%B9%88%E4%BC%98%E5%8C%96/"/>
     <id>http://yoursite.com/2017/06/26/JavaScript的尾递归怎么优化/</id>
     <published>2017-06-26T15:28:41.000Z</published>
-    <updated>2017-07-02T10:00:32.563Z</updated>
+    <updated>2017-07-08T14:46:02.752Z</updated>
     
     <content type="html"><![CDATA[<p>这两天项目轻松点，抽空在刷阮一峰大佬的《ES6标准入门》，其中<code>尾调用优化</code>一节相当牛逼，且具有一定挑战性和启发性，故此开一篇博客，抄袭、总结、思考一番。这篇博文的整体行文架构将十分厚颜无耻地直接抄袭自阮大佬，章节标题之下会有一些自己的总结，针对一些难以理解的概念、代码，将一定程度展开讨论，争取形成一篇未必有干货但铁定有私货的文章。</p>
 <h2 id="尾调用"><a href="#尾调用" class="headerlink" title="尾调用"></a>尾调用</h2><p>要谈<code>尾递归</code>，先说<code>尾调用</code>，英文名字是<code>Tail Call</code>。什么是<code>尾调用</code>？大佬说了，就是指某个函数的最后一步是调用另一个函数！这里的最后一步是指实际执行过程中的最后一步，不一定是从代码上看到的函数末尾。<br>看几个例子。</p>
@@ -39,7 +70,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">tailFactorial</span>(<span class="params">n, total</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (n === <span class="number">1</span>) <span class="keyword">return</span> total;</div><div class="line">    <span class="keyword">return</span> tailFactorial(n - <span class="number">1</span>, n * total);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">n</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> tailFactorial(n, <span class="number">1</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">factorial(<span class="number">5</span>) <span class="comment">// 120</span></div></pre></td></tr></table></figure>
 <p>调用者只顾调<code>factorial</code>，不用管内部实现，它看到的<code>factorial(n)</code>是非常符合逻辑的。在ES6下，有了<code>默认参数</code>特性，情况变的更加简单，如下。调用者不用关心第二个参数，只顾调用<code>factorial(n)</code>就可以了。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">n, total = <span class="number">1</span></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (n === <span class="number">1</span>) <span class="keyword">return</span> total;</div><div class="line">    <span class="keyword">return</span> factorial(n - <span class="number">1</span>, n * total);</div><div class="line">&#125;</div><div class="line">factorial(<span class="number">5</span>) <span class="comment">// 120</span></div></pre></td></tr></table></figure>
-<h2 id="尾递归优化的实现"><a href="#尾递归优化的实现" class="headerlink" title="尾递归优化的实现"></a>尾递归优化的实现</h2><p>ES6的尾调用优化只在严格模式下开启，正常模式无效。这是因为在正常模式下，每个函数内有两个隐藏的内部变量<code>arguments</code>和<code>caller</code>，用来跟踪函数调用栈。假设支持了尾递归优化，每次递归函数进来，当前<code>调用帧</code>替换原来的<code>调用帧</code>，就把<code>arguments</code>和<code>caller</code>覆盖了，从而无法跟踪调用栈，产生了矛盾。也就是说，<code>跟踪调用栈</code>和<code>尾递归优化</code>二者只能有一个存活，考虑到<code>arguments</code>和<code>caller</code>的设计目的本来就是为了跟踪调用栈，没理由为了<code>尾递归优化</code>而舍弃，因此，二者相权衡，还是决定在这种非严格模式下不进行<code>尾递归优化</code>。严格模式下则禁用了上述两个内部变量，<code>尾递归优化</code>得以顺利部署。</p>
+<h2 id="尾递归优化的实现"><a href="#尾递归优化的实现" class="headerlink" title="尾递归优化的实现"></a>尾递归优化的实现</h2><p>ES6的尾调用优化只在严格模式下开启，正常模式无效。这是因为在正常模式下，每个函数内有两个隐藏的内部变量<code>arguments</code>和<code>caller</code>，用来跟踪函数调用栈。假设支持了<code>尾递归优化</code>，每次递归函数进来，当前<code>调用帧</code>替换原来的<code>调用帧</code>，就把<code>arguments</code>和<code>caller</code>覆盖了，从而无法跟踪调用栈，产生了矛盾。也就是说，<code>跟踪调用栈</code>和<code>尾递归优化</code>二者只能有一个存活，考虑到<code>arguments</code>和<code>caller</code>的设计目的本来就是为了跟踪调用栈，没理由为了<code>尾递归优化</code>而舍弃，因此，二者相权衡，还是决定在这种非严格模式下不进行<code>尾递归优化</code>。严格模式下则禁用了上述两个内部变量，<code>尾递归优化</code>得以顺利部署。</p>
 <p>为了在正常模式下也能进行<code>尾递归优化</code>，我们可以自己实现呀。原理就是把递归改写成循环的形式，不就可以大大减少函数调用，从而节省了内存，避免栈溢出了吗？所以问题的关键在于如何将递归改写成循环。<br>我们以一个累加函数<code>sum</code>为例，参数<code>x</code>是基值，参数<code>y</code>是递归次数，我们尝试递归100000次，溢出了。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// tail recursion without optimization</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (y &gt; <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">return</span> sum(x + <span class="number">1</span>, y - <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> x;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>, <span class="number">1000000</span>));	<span class="comment">// Maximum call stack size exceeded</span></div></pre></td></tr></table></figure>
 <p>第一种方法，借助<code>蹦床函数(trampoline)</code>优化。首先，这种方法要求我们改变原函数的内部实现，把原来返回<code>函数调用</code>改为返回<code>函数</code>。如何返回<code>函数</code>？借助<code>bind</code>来实现。然后，定义一个<code>蹦床函数</code>，它接受一个函数<code>f</code>作为参数，然后在<code>蹦床</code>内执行函数<code>f</code>，如果<code>f</code>返回的还是函数，就继续执行，循环起来，直到<code>f</code>返回非函数，退出循环。<br>以<code>蹦床函数</code>的方式，我们成功实现了将递归改写成循环，但是，由于这种方法要求我们改写原函数内部实现，破坏了原函数逻辑，因此不是一种非常好的处理方式，我们玩玩就算了，引擎不会采用这么naive的写法。</p>

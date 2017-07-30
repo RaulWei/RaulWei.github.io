@@ -108,7 +108,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/06/26/JavaScript的尾递归怎么优化/index.html">
 <meta property="og:site_name" content="RaulWei&#39;s">
 <meta property="og:description" content="这两天项目轻松点，抽空在刷阮一峰大佬的《ES6标准入门》，其中尾调用优化一节相当牛逼，且具有一定挑战性和启发性，故此开一篇博客，抄袭、总结、思考一番。这篇博文的整体行文架构将十分厚颜无耻地直接抄袭自阮大佬，章节标题之下会有一些自己的总结，针对一些难以理解的概念、代码，将一定程度展开讨论，争取形成一篇未必有干货但铁定有私货的文章。 尾调用要谈尾递归，先说尾调用，英文名字是Tail Call。什么是尾">
-<meta property="og:updated_time" content="2017-07-02T10:00:32.563Z">
+<meta property="og:updated_time" content="2017-07-08T14:46:02.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript的尾递归怎么优化">
 <meta name="twitter:description" content="这两天项目轻松点，抽空在刷阮一峰大佬的《ES6标准入门》，其中尾调用优化一节相当牛逼，且具有一定挑战性和启发性，故此开一篇博客，抄袭、总结、思考一番。这篇博文的整体行文架构将十分厚颜无耻地直接抄袭自阮大佬，章节标题之下会有一些自己的总结，针对一些难以理解的概念、代码，将一定程度展开讨论，争取形成一篇未必有干货但铁定有私货的文章。 尾调用要谈尾递归，先说尾调用，英文名字是Tail Call。什么是尾">
@@ -393,7 +393,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">tailFactorial</span>(<span class="params">n, total</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (n === <span class="number">1</span>) <span class="keyword">return</span> total;</div><div class="line">    <span class="keyword">return</span> tailFactorial(n - <span class="number">1</span>, n * total);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">n</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> tailFactorial(n, <span class="number">1</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">factorial(<span class="number">5</span>) <span class="comment">// 120</span></div></pre></td></tr></table></figure>
 <p>调用者只顾调<code>factorial</code>，不用管内部实现，它看到的<code>factorial(n)</code>是非常符合逻辑的。在ES6下，有了<code>默认参数</code>特性，情况变的更加简单，如下。调用者不用关心第二个参数，只顾调用<code>factorial(n)</code>就可以了。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">n, total = <span class="number">1</span></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (n === <span class="number">1</span>) <span class="keyword">return</span> total;</div><div class="line">    <span class="keyword">return</span> factorial(n - <span class="number">1</span>, n * total);</div><div class="line">&#125;</div><div class="line">factorial(<span class="number">5</span>) <span class="comment">// 120</span></div></pre></td></tr></table></figure>
-<h2 id="尾递归优化的实现"><a href="#尾递归优化的实现" class="headerlink" title="尾递归优化的实现"></a>尾递归优化的实现</h2><p>ES6的尾调用优化只在严格模式下开启，正常模式无效。这是因为在正常模式下，每个函数内有两个隐藏的内部变量<code>arguments</code>和<code>caller</code>，用来跟踪函数调用栈。假设支持了尾递归优化，每次递归函数进来，当前<code>调用帧</code>替换原来的<code>调用帧</code>，就把<code>arguments</code>和<code>caller</code>覆盖了，从而无法跟踪调用栈，产生了矛盾。也就是说，<code>跟踪调用栈</code>和<code>尾递归优化</code>二者只能有一个存活，考虑到<code>arguments</code>和<code>caller</code>的设计目的本来就是为了跟踪调用栈，没理由为了<code>尾递归优化</code>而舍弃，因此，二者相权衡，还是决定在这种非严格模式下不进行<code>尾递归优化</code>。严格模式下则禁用了上述两个内部变量，<code>尾递归优化</code>得以顺利部署。</p>
+<h2 id="尾递归优化的实现"><a href="#尾递归优化的实现" class="headerlink" title="尾递归优化的实现"></a>尾递归优化的实现</h2><p>ES6的尾调用优化只在严格模式下开启，正常模式无效。这是因为在正常模式下，每个函数内有两个隐藏的内部变量<code>arguments</code>和<code>caller</code>，用来跟踪函数调用栈。假设支持了<code>尾递归优化</code>，每次递归函数进来，当前<code>调用帧</code>替换原来的<code>调用帧</code>，就把<code>arguments</code>和<code>caller</code>覆盖了，从而无法跟踪调用栈，产生了矛盾。也就是说，<code>跟踪调用栈</code>和<code>尾递归优化</code>二者只能有一个存活，考虑到<code>arguments</code>和<code>caller</code>的设计目的本来就是为了跟踪调用栈，没理由为了<code>尾递归优化</code>而舍弃，因此，二者相权衡，还是决定在这种非严格模式下不进行<code>尾递归优化</code>。严格模式下则禁用了上述两个内部变量，<code>尾递归优化</code>得以顺利部署。</p>
 <p>为了在正常模式下也能进行<code>尾递归优化</code>，我们可以自己实现呀。原理就是把递归改写成循环的形式，不就可以大大减少函数调用，从而节省了内存，避免栈溢出了吗？所以问题的关键在于如何将递归改写成循环。<br>我们以一个累加函数<code>sum</code>为例，参数<code>x</code>是基值，参数<code>y</code>是递归次数，我们尝试递归100000次，溢出了。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// tail recursion without optimization</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (y &gt; <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">return</span> sum(x + <span class="number">1</span>, y - <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> x;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>, <span class="number">1000000</span>));	<span class="comment">// Maximum call stack size exceeded</span></div></pre></td></tr></table></figure>
 <p>第一种方法，借助<code>蹦床函数(trampoline)</code>优化。首先，这种方法要求我们改变原函数的内部实现，把原来返回<code>函数调用</code>改为返回<code>函数</code>。如何返回<code>函数</code>？借助<code>bind</code>来实现。然后，定义一个<code>蹦床函数</code>，它接受一个函数<code>f</code>作为参数，然后在<code>蹦床</code>内执行函数<code>f</code>，如果<code>f</code>返回的还是函数，就继续执行，循环起来，直到<code>f</code>返回非函数，退出循环。<br>以<code>蹦床函数</code>的方式，我们成功实现了将递归改写成循环，但是，由于这种方法要求我们改写原函数内部实现，破坏了原函数逻辑，因此不是一种非常好的处理方式，我们玩玩就算了，引擎不会采用这么naive的写法。</p>
@@ -452,6 +452,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/17/Bootcamp也结束了/" rel="prev" title="Bootcamp也结束了">
+                Bootcamp也结束了 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -523,7 +527,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -545,7 +549,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
