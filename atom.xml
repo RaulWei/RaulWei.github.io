@@ -38,9 +38,9 @@
       <category term="Work" scheme="http://yoursite.com/categories/Work/"/>
     
     
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
       <category term="WAP" scheme="http://yoursite.com/tags/WAP/"/>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
     
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
