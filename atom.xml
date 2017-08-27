@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-30T16:37:13.221Z</updated>
+  <updated>2017-08-27T08:40:24.172Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,111 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>稍微6一点的IDEA玩法</title>
+    <link href="http://yoursite.com/2017/08/26/%E7%A8%8D%E5%BE%AE6%E4%B8%80%E7%82%B9%E7%9A%84IDEA%E7%8E%A9%E6%B3%95/"/>
+    <id>http://yoursite.com/2017/08/26/稍微6一点的IDEA玩法/</id>
+    <published>2017-08-25T16:09:34.000Z</published>
+    <updated>2017-08-27T08:40:24.172Z</updated>
+    
+    <content type="html"><![CDATA[<p>一开始进组对什么都不熟悉，乖乖地按照新人手册搭环境，跑项目。到如今也有一个多月了，别别扭扭地用了这么久eclipse，终于在这周换了IDEA，两个字，真爽！太他妈智能了，代码自己蹭蹭地往外冒，感觉都不用自己写了。其实以前也用过一段时间IDEA，但是学生嘛，写点玩具项目，也没什么需求接触IDEA的各种功能，那天看到凯哥一顿行云流水的操作，很眼馋，于是决定挖掘和记录一下IDEA在工作中比较常用的功能快捷键，希望可以以此提升工作效率和体验。</p>
+<h3 id="设置相关"><a href="#设置相关" class="headerlink" title="设置相关"></a>设置相关</h3><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alt + Ctrl + s</td>
+<td>打开Settings</td>
+</tr>
+<tr>
+<td>Alt + Ctrl + Shift + s</td>
+<td>打开Project Structure，也可以先选中Project，再按F4，效果一样</td>
+</tr>
+</tbody>
+</table>
+<h3 id="搜索相关"><a href="#搜索相关" class="headerlink" title="搜索相关"></a>搜索相关</h3><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl + e</td>
+<td>找到最近访问的文件</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + e</td>
+<td>找到最近编辑的文件</td>
+</tr>
+<tr>
+<td>Ctrl + Click</td>
+<td>按住Ctrl，再点击它就会跳转到对应的源码中去</td>
+</tr>
+<tr>
+<td>敲两下Shift</td>
+<td>弹出搜索框，根据类名寻找类，或根据资源名寻找资源，或根据<code>/文件夹名</code>寻找文件夹</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + A</td>
+<td>调出<code>Enter action or option name</code>，帮助搜索行为，如搜<code>REST Client</code>可调用它</td>
+</tr>
+<tr>
+<td>Ctrl + F12</td>
+<td>悬浮显示该类的Structure，如果记得方法名，想跳转过去，可直接在焦点位于悬浮窗时输入，匹配后回车，方便</td>
+</tr>
+</tbody>
+</table>
+<h3 id="编辑相关"><a href="#编辑相关" class="headerlink" title="编辑相关"></a>编辑相关</h3><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shift + Enter</td>
+<td>在行中任意位置执行此快捷键，可另起一行，并跳转过去</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Enter</td>
+<td>在行中任意位置执行此快捷键，可快速补全行尾分号</td>
+</tr>
+<tr>
+<td>Shift + F6</td>
+<td>重命名类、方法、变量</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + z</td>
+<td>取消撤销</td>
+</tr>
+<tr>
+<td>Alt + Insert</td>
+<td>可以选择自动插入构造器、getter、setter等</td>
+</tr>
+<tr>
+<td>Alt + Enter</td>
+<td>可以选择提示的建议来优化代码</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一开始进组对什么都不熟悉，乖乖地按照新人手册搭环境，跑项目。到如今也有一个多月了，别别扭扭地用了这么久eclipse，终于在这周换了IDEA，两个字，真爽！太他妈智能了，代码自己蹭蹭地往外冒，感觉都不用自己写了。其实以前也用过一段时间IDEA，但是学生嘛，写点玩具项目，也没
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Bootcamp也结束了</title>
