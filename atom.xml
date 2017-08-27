@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-27T08:40:24.172Z</updated>
+  <updated>2017-08-27T09:02:00.935Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://yoursite.com/2017/08/26/%E7%A8%8D%E5%BE%AE6%E4%B8%80%E7%82%B9%E7%9A%84IDEA%E7%8E%A9%E6%B3%95/"/>
     <id>http://yoursite.com/2017/08/26/稍微6一点的IDEA玩法/</id>
     <published>2017-08-25T16:09:34.000Z</published>
-    <updated>2017-08-27T08:40:24.172Z</updated>
+    <updated>2017-08-27T09:02:00.935Z</updated>
     
-    <content type="html"><![CDATA[<p>一开始进组对什么都不熟悉，乖乖地按照新人手册搭环境，跑项目。到如今也有一个多月了，别别扭扭地用了这么久eclipse，终于在这周换了IDEA，两个字，真爽！太他妈智能了，代码自己蹭蹭地往外冒，感觉都不用自己写了。其实以前也用过一段时间IDEA，但是学生嘛，写点玩具项目，也没什么需求接触IDEA的各种功能，那天看到凯哥一顿行云流水的操作，很眼馋，于是决定挖掘和记录一下IDEA在工作中比较常用的功能快捷键，希望可以以此提升工作效率和体验。</p>
+    <content type="html"><![CDATA[<p>一开始进组对什么都不熟悉，乖乖地按照新人手册搭环境，跑项目，到如今也有一个多月了，别别扭扭地用了这么久eclipse，终于在这周换了IDEA。两个字，真爽！太他妈智能了！代码自己蹭蹭地往外冒，感觉都不用自己写了。其实以前也用过一段时间IDEA，但是学生嘛，写点玩具项目，也没什么需求接触IDEA的各种功能。那天看到凯哥一顿行云流水的操作，很眼馋，于是决定挖掘和记录一下IDEA在工作中比较常用的功能快捷键，希望可以帮助提升工作效率和体验。</p>
 <h3 id="设置相关"><a href="#设置相关" class="headerlink" title="设置相关"></a>设置相关</h3><table>
 <thead>
 <tr>
@@ -71,7 +71,7 @@
 </tr>
 <tr>
 <td>Ctrl + F12</td>
-<td>悬浮显示该类的Structure，如果记得方法名，想跳转过去，可直接在焦点位于悬浮窗时输入，匹配后回车，方便</td>
+<td>悬浮显示该类的Structure，如果记得方法名，想跳转过去，可直接在焦点位于悬浮窗时输入，匹配后回车，贼方便</td>
 </tr>
 </tbody>
 </table>
@@ -113,10 +113,14 @@
     
     <summary type="html">
     
-      &lt;p&gt;一开始进组对什么都不熟悉，乖乖地按照新人手册搭环境，跑项目。到如今也有一个多月了，别别扭扭地用了这么久eclipse，终于在这周换了IDEA，两个字，真爽！太他妈智能了，代码自己蹭蹭地往外冒，感觉都不用自己写了。其实以前也用过一段时间IDEA，但是学生嘛，写点玩具项目，也没
+      &lt;p&gt;一开始进组对什么都不熟悉，乖乖地按照新人手册搭环境，跑项目，到如今也有一个多月了，别别扭扭地用了这么久eclipse，终于在这周换了IDEA。两个字，真爽！太他妈智能了！代码自己蹭蹭地往外冒，感觉都不用自己写了。其实以前也用过一段时间IDEA，但是学生嘛，写点玩具项目，也没
     
     </summary>
     
+      <category term="Technique" scheme="http://yoursite.com/categories/Technique/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
